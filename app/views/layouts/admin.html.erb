@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <% if @meta_description.present? %>
+      <meta name="description" content="<%= @meta_description %>">
+    <% end %>
+    <meta name="author" content="">
+    <title><%= @meta_title ? @meta_title : ApplicationController::BRAND_NAME %></title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', 'style' %>
+    <%= javascript_include_tag 'application' %>
+    <%= yield :javascript_includes %>
+    <%= yield :css_includes %>
+    <!--[if lt IE 9]>
+      <script src="/assets/html5shiv.js"></script>
+      <script src="/assets/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    
+    <!-- navbar -->
+    <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-black sticky-top">
+      <div class="container">
+        <%= link_to root_path, class: "navbar-brand logo" do %>
+          <%= image_tag "logo.png", class: "img-fluid" %>
+        <% end %> 
+        <!-- menu bars -->
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul id="menu" class="nav links" >
+            <li class="nav-item <%= menu_active(['admin/dashboard']) %>">
+              <%= link_to raw("HOME<span class='slider'></span> "), 
+                          root_path(anchor: "home"), class: "underline" %>
+            </li>
+            <li class="nav-item <%= menu_active(['admin/products']) %>">
+              <%= link_to raw("PRODUCT<span class='slider'></span> "), 
+                          admin_products_path, class: "underline" %>
+            </li>
+            <li class="nav-item <%= menu_active(['admin/banners']) %>">
+              <%= link_to raw("BANNER<span class='slider'></span> "), 
+                          admin_banners_path, class: "underline" %>
+            </li>
+            <li class="nav-item <%= menu_active(['admin/services']) %>">
+              <%= link_to raw("SERVICES<span class='slider'></span> "), 
+                          admin_services_path, class: "underline" %>
+            </li>
+            <li class="nav-item <%= menu_active(['admin/services']) %>">
+              <%= link_to raw("LOGOUT<span class='slider'></span> "), 
+                          logout_path, class: "underline", :method => :delete %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <%= yield %>
+
+    <footer>
+      <div class="footer-bottom-area">
+        <div class="container">
+          <div class="row">
+              <div class="col-12">
+                <div class="copyright">
+                  <p>Copyright © <%= Date.today.year %> 
+                     <span class="custom-green">Luminous</span>. All Rights Reserved.</p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
