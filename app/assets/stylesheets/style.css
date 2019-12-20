@@ -5,6 +5,7 @@ body {
 } 
 
 .no-margin-lr{margin-left: 0px!important;margin-right: 0px!important;}
+.no-padding-lr{padding-left: 0px!important;padding-right: 0px!important;}
 p {color: #000;}
 .custom-green{ color: #70B8B4!important }
 .main-section .breadcrumb{ background-color: transparent; }
