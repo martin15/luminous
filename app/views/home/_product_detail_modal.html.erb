@@ -1,0 +1,9 @@
+<div class="col-md-6">
+  <%= image_tag product.get_image("medium"), class: "img-fluid" %>
+</div>
+<div class="col-md-6">
+  <h2 class="pt-sm-3"><%= product.name.titleize %></h2>
+  <p class="text-muted">
+    <%= raw(product.description) %>
+  </p>
+</div>

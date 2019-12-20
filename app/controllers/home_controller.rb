@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+  before_action :find_product, only: [:show_modal, :product_detail]
 
   def index
     @contact = Contact.new
@@ -24,8 +25,27 @@ class HomeController < ApplicationController
     end
   end
 
+  def show_modal
+    respond_to do |format|
+      format.html do
+        redirect_to product_detail_path(@product.permalink)
+      end
+      format.js
+    end
+  end
+
+  def product_detail
+  end
+
   private
     def contact_params
       params.require(:contact).permit(:name, :email, :phone, :subject, :content)
+    end
+
+    def find_product
+      @product = Product.find_by_permalink(params[:permalink])
+      if @product.nil?
+        redirect_to root_path
+      end
     end
 end

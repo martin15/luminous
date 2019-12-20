@@ -1,6 +1,6 @@
 <% content_for :javascript_includes do %>
   <%= javascript_include_tag "owl.carousel", "slick" %>
-  <%= stylesheet_link_tag  "owl.carousel", "animate", "owl.theme", "slick", "slick-theme" %>
+  <%= stylesheet_link_tag  "owl.carousel", "animate", "owl.theme", "slick", "slick-theme", "lunar" %>
 <% end %>
 
 <script>
@@ -36,21 +36,31 @@
 </section>
 
 <section id="services" class="main-section bg-black-gradient">
-  <div class="col-12">
-    <div class="row justify-content-center">
-      <h1>OUR SERVICES</h1>
-      <div class="services-slider owl-carousel owl-theme">
-        <% @services.each do |service| %>
-          <div class="item">
-            <%# <div class="custom-overlay-inner">
-              &nbsp;
-            </div> %>
-            <%= image_tag service.image.url(:large) %>
-          <div class="img-gradation-white"></div>
-          </div>
-        <% end %>
-      </div>
-		</div>
+  <div class="row justify-content-center">
+    <h1>OUR SERVICES</h1>
+  </div>
+  <div class="row justify-content-center no-margin-lr">
+    <div class="col-6 services-image">
+      <%= image_tag "640-Konsultasi.png", class: "img-fluid" %>
+    </div>
+    <div class="col-6 services-detail my-auto">
+      <h2>KONSULTASI</h2>
+      <p>
+        Kami memberikan ruang untuk berdikusi dan berkonsultasi
+        supaya pelaku industri sepuh perhiasan emas dapat
+        memberikan pelayanan terbaik bagi konsumennya.
+      </p>
+    </div>
+    <div class="col-6 services-image order-md-2">
+      <%= image_tag "640-Pelatihan.png", class: "img-fluid" %>
+    </div>
+    <div class="col-6 services-detail my-auto order-md-1">
+      <h2>PELATIHAN</h2>
+      <p>
+        Kami memberikan pelatihan teknik penyepuhan menggunakan produk LMS hingga
+        konsumen mampu mengerjakan secara mandiri.
+      </p>
+    </div>
   </div>
 </section>
 
@@ -58,11 +68,36 @@
   <div class="col-12">
     <div class="row justify-content-center img-slider">
       <h1>OUR PRODUCTS</h1>
-      <div class="col-10 center">
+      <div class="col-10 center tiles">
         <% @products.each do |product| %>
-          <div><%= image_tag product.get_image("medium"), class: "img-fluid" %></div>
+          <div>
+            <%= link_to show_modal_product_detail_path(product.permalink),
+                        class: "tile show-modal", remote: true do %>
+              <%= image_tag product.get_image("medium"), class: "img-fluid" %>
+              <div class="details">
+                <span class="title"><%= product.name %></span>
+              </div>
+            <% end %>
+          </div>
         <% end %>
       </div>
+      <div class="col-10 pagingInfo"></div>
+      <!-- Modal Start -->
+      <div class="modal fade"  id="product-detail-modal"  tabindex="-1" role="dialog"
+          aria-labelledby="demoModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered  modal-lg  " role="document">
+          <div class="modal-content">
+            <div class="container-fluid">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <div class="row product-detail">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal Ends -->
     </div>
   </div>
   <div class="col-12 faq-home">
@@ -158,10 +193,18 @@
 
 <script>
   $(document).ready(function () {
+    var $status = $('.pagingInfo');
+    var $slickElement = $('.center');
+
+    $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+        //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+        var i = (currentSlide ? currentSlide : 0) + 1;
+        $status.text(i + '/' + slick.slideCount);
+    });
+
     $('.center').slick({
       centerMode: true,
       slidesToShow: 3,
-      dots: true,
       responsive: [
         {
           breakpoint: 768,

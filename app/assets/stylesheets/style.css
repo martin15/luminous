@@ -4,6 +4,7 @@ body {
   font-family: 'Titillium Web', sans-serif!important;
 } 
 
+.no-margin-lr{margin-left: 0px!important;margin-right: 0px!important;}
 p {color: #000;}
 .custom-green{ color: #70B8B4!important }
 .main-section .breadcrumb{ background-color: transparent; }
@@ -549,6 +550,14 @@ section {
   width: 50%;
   background-color: #fff ;
 }
+#services .services-image{ padding: 0px!important;}
+#services .services-detail{
+  padding: 0 120px;
+  text-align: center;
+}
+#services .services-detail p, #services .services-detail h2{color: #fff;}
+#services .services-detail h2{margin-bottom: 40px;}
+#services .services-detail p{ line-height: 35px; font-size: 17px; }
 #product{
   padding-bottom: 0px;
   padding-top: 50px;
@@ -556,11 +565,6 @@ section {
 }
 #product h1{ color:#000; }
 #product .img-slider{ margin-bottom: 60px;}
-#product .img-slider img{ 
-  -webkit-box-shadow: 10px 10px 5px #CBC9CE;
-  -moz-box-shadow: 10px 10px 5px #CBC9CE;
-  box-shadow: 10px 10px 5px #CBC9CE;
-}
 
 /* ====================== Contact US ======================*/
 section#hubungi-kami{ padding-top: 10px!important; background-color: #2d2d30;}
@@ -689,7 +693,10 @@ section#hubungi-kami{ padding-top: 10px!important; background-color: #2d2d30;}
   background-color: #f9d05a;
   border-color: #f9d05a;
 }
-
+.contact-wa{
+  width: 85px;
+  margin: 0 25px 25px 0;
+}
 
 /* --------------------------------------------
  *  Product + Service Center
@@ -918,13 +925,13 @@ transform: scale(1.1);
 }
 
 .product-detail{
-  margin-top: 30px;
+  margin: 30px 0;
   font-size: 13px;
   color: #666;
 }
 .product-detail h4.detail-name{ color: #000; margin-bottom: 15px; }
 .product-detail span.price{ font-size: 16px; color: #000; }
-.product-detail p { font-size: 13px; margin-top: 15px; color: #666;}
+.product-detail p { font-size: 14px; margin-top: 15px; color: #666;}
 
 #carousel img { opacity: .5; cursor: pointer; }
 #carousel img:hover { opacity: 1; }
@@ -1357,5 +1364,79 @@ a.a-blog:hover { color: #70B8B4; }
 }
 .slick-active { opacity: .8; }
 .slick-current { opacity: 1; }
+.pagingInfo{ text-align: center;}
+.tiles .tile {
+  display: inline-block;
+  text-align: left;
+  opacity: .99;
+  overflow: hidden;
+  position: relative;
+  border-radius: 3px;
+  -webkit-box-shadow: 10px 10px 5px #CBC9CE;
+  -moz-box-shadow: 10px 10px 5px #CBC9CE;
+  box-shadow: 10px 10px 5px #CBC9CE;
+}
+.tiles .tile:before {
+  content: '';
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+  width: 100%;
+  height: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+  transition-property: top, opacity;
+  transition-duration: 0.3s;
+}
+.tiles .tile img {
+  display: block;
+  max-width: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.tiles .tile .details {
+  font-size: 16px;
+  padding: 20px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+}
+.tiles .tile .details span {
+  display: block;
+  opacity: 0;
+  position: relative;
+  top: 100px;
+  transition-property: top, opacity;
+  transition-duration: 0.3s;
+  transition-delay: 0s;
+}
+.tiles .tile .details .title {
+  line-height: 25px;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+}
+.tiles .tile:focus:before,
+.tiles .tile:focus span, .tiles .tile:hover:before,
+.tiles .tile:hover span {
+  opacity: 1;
+}
+.tiles .tile:focus:before, .tiles .tile:hover:before {
+  top: 50%;
+}
+.tiles .tile:focus span, .tiles .tile:hover span {
+  top: 0;
+}
+.tiles .tile:focus .title, .tiles .tile:hover .title {
+  transition-delay: 0.15s;
+}
+.tiles .tile:focus .info, .tiles .tile:hover .info {
+  transition-delay: 0.25s;
+}
+
 
 
