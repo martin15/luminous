@@ -185,7 +185,12 @@ footer .links li a.underline:hover{
   #nav .links { overflow-y: scroll; }
 }
 
-
+.custom-toggler.navbar-toggler {
+  border-color: #ffcc33!important;
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,204,51, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")!important;
+}
 
 /*---------------------------------------
                 HEADER
@@ -429,16 +434,6 @@ footer .links li a.underline:hover{
 
 
 @media (max-width: 767px) {
-  .fw-links{
-    float: right;
-  }
-  .fw-contact{
-    padding-top: 40px;
-    text-align: center;
-  }
-  .fw-contact .text::after{
-    display: none;
-  }
 }
 
 
@@ -558,6 +553,13 @@ section {
 #services .services-detail p, #services .services-detail h2{color: #fff;}
 #services .services-detail h2{margin-bottom: 40px;}
 #services .services-detail p{ line-height: 35px; font-size: 17px; }
+
+@media (max-width: 767px) {
+  #services .services-detail{ padding: 0 40px!important; margin-bottom: 50px!important; }
+  #services .services-image{ margin-bottom:50px!important;}
+  #services .services-detail h2{margin-bottom: 15px;}
+}
+
 #product{
   padding-bottom: 0px;
   padding-top: 50px;
@@ -697,6 +699,12 @@ section#hubungi-kami{ padding-top: 10px!important; background-color: #2d2d30;}
   width: 85px;
   margin: 0 25px 25px 0;
 }
+
+@media (max-width: 767px) {
+  #hubungi-kami .ca-info{ padding: 40px 0 0!important;}
+  .contact-wa{ width: 55px!important; }
+}
+
 
 /* --------------------------------------------
  *  Product + Service Center
@@ -1154,6 +1162,12 @@ section.logged-user .row{
 
 .faq-home .header{ color: #2d2d30; text-align: center;}
 .faq-home .text{ color: #2d2d30; text-align: center; padding: 30px 250px;}
+@media (max-width: 767px) {
+  .faq-home .text{ padding: 0 10px; }
+}
+
+
+
 .btn-outline-black {
   color: #2d2d30;
   background-color: transparent;
