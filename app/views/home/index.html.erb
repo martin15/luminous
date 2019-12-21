@@ -20,14 +20,15 @@
   });
 </script>
 
-<section id="services" class="main-section bg-black-gradient">
-  <div class="row justify-content-center">
+<section id="pre-banner" class="main-section bg-black-gradient">
+  <div class="row justify-content-center no-margin-lr">
     <div class="col-12 no-padding-lr">
       <%= image_tag "sub-banner.jpg", class: "img-fluid" %>
     </div>
   </div>
 </section>
 <!-- header -->
+
 <section id="home">
   <div class="banner owl-carousel owl-theme">
     <% @banners.each do |banner| %>
@@ -42,7 +43,7 @@
   </div>
 </section>
 <section id="services" class="main-section bg-black-gradient no-padding-lr">
-  <div class="row justify-content-center">
+  <div class="row justify-content-center no-margin-lr">
     <h1>OUR SERVICES</h1>
   </div>
   <div class="row justify-content-center no-margin-lr">
@@ -50,29 +51,33 @@
       <%= image_tag "640-Konsultasi.png", class: "img-fluid" %>
     </div>
     <div class="col-12 col-md-6 services-detail my-auto">
-      <h2>KONSULTASI</h2>
-      <p>
-        Kami memberikan ruang untuk berdikusi dan berkonsultasi
-        supaya pelaku industri sepuh perhiasan emas dapat
-        memberikan pelayanan terbaik bagi konsumennya.
-      </p>
+      <div class="services-detail-content">
+        <h2>KONSULTASI</h2>
+        <p>
+          Kami memberikan ruang untuk berdikusi dan berkonsultasi
+          supaya pelaku industri sepuh perhiasan emas dapat
+          memberikan pelayanan terbaik bagi konsumennya.
+        </p>
+      </div>
     </div>
     <div class="col-12 col-md-6 services-image order-md-2">
       <%= image_tag "640-Pelatihan.png", class: "img-fluid" %>
     </div>
     <div class="col-12 col-md-6 services-detail my-auto order-md-1">
-      <h2>PELATIHAN</h2>
-      <p>
-        Kami memberikan pelatihan teknik penyepuhan menggunakan produk LMS hingga
-        konsumen mampu mengerjakan secara mandiri.
-      </p>
+      <div class="services-detail-content">
+        <h2>PELATIHAN</h2>
+        <p>
+          Kami memberikan pelatihan teknik penyepuhan menggunakan produk LMS hingga
+          konsumen mampu mengerjakan secara mandiri.
+        </p>
+      </div>
     </div>
   </div>
 </section>
 
 <section id="product" class="main-section">
   <div class="col-12">
-    <div class="row justify-content-center img-slider">
+    <div class="row justify-content-center img-slider no-margin-lr">
       <h1>OUR PRODUCTS</h1>
       <div class="col-10 center tiles">
         <% @products.each do |product| %>

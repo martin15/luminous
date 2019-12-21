@@ -526,7 +526,8 @@ section {
   background-color: #34495e; }
 
 /* ====================== services + Products ======================*/
-#services{padding-bottom: 0px;}
+#services, #pre-banner{padding-bottom: 0px;}
+#pre-banner{padding-top: 0px;}
 #services h1, #product h1{
   font: 400 35px 'Titillium Web', sans-serif;
   color: #f9d05a;
@@ -548,12 +549,20 @@ section {
 }
 #services .services-image{ padding: 0px!important;}
 #services .services-detail{
-  padding: 0 120px;
+  padding: 0 50px;
   text-align: center;
 }
-#services .services-detail p, #services .services-detail h2{color: #fff;}
-#services .services-detail h2{margin-bottom: 40px;}
-#services .services-detail p{ line-height: 35px; font-size: 17px; }
+#services .services-detail .services-detail-content{
+  background-color: #FAC950;
+  padding: 35px 50px 25px;
+}
+#services .services-detail p, #services .services-detail h2{color: #000;}
+#services .services-detail h2{
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 40px;
+  letter-spacing: 5px;}
+#services .services-detail p{ line-height: 25px; font-size: 17px; font-weight: 600; }
 
 @media (max-width: 767px) {
   #services .services-detail{ padding: 0 40px!important; margin-bottom: 50px!important; }
@@ -1156,6 +1165,7 @@ section.logged-user .row{
  *  FAQ
  *----------------------------------------------- */
 
+ 
 .faq-home{
    background-color: #fff;
    padding: 50px 0;
