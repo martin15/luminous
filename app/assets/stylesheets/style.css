@@ -569,6 +569,18 @@ section {
   #services .services-image{ margin-bottom:50px!important;}
   #services .services-detail h2{margin-bottom: 15px;}
 }
+@media (max-width: 570px) {
+  #services .services-detail h2{
+    font-size: 35px!important;
+    letter-spacing: 0px!important;
+  }
+  #services .services-detail p{
+    line-height: 22px!important;
+    font-size: 15px!important;
+    font-weight: 500!important;
+  }
+}
+
 
 #product{
   padding-bottom: 0px;
