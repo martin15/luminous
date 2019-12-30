@@ -182,8 +182,12 @@ footer .links li a.underline:hover{
     margin-bottom: 5px;
   } 
 }
+
+.mobile-display {display: none;}
 @media (max-width: 570px) {
   #nav .links { overflow-y: scroll; }
+  .web-display {display: none!important;}
+  .mobile-display {display: block!important;}
 }
 
 .custom-toggler.navbar-toggler {
