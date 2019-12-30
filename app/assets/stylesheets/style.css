@@ -1182,18 +1182,16 @@ section.logged-user .row{
  *----------------------------------------------- */
 
  
-.faq-home{
+.faq-home, .vid-home{
    background-color: #fff;
    padding: 50px 0;
  }
 
-.faq-home .header{ color: #2d2d30; text-align: center;}
+.faq-home .header, .vid-home .header{ color: #2d2d30; text-align: center;}
 .faq-home .text{ color: #2d2d30; text-align: center; padding: 30px 250px;}
 @media (max-width: 767px) {
   .faq-home .text{ padding: 0 10px; }
 }
-
-
 
 .btn-outline-black {
   color: #2d2d30;
