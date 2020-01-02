@@ -1283,15 +1283,6 @@ a.a-blog:hover { color: #70B8B4; }
  *  SLICK + OWL
  *----------------------------------------------- */
 
- .owl-theme .owl-nav .owl-prev {
-  left: -45px;
-  top: 45%;
-}
-
-.owl-theme .owl-nav .owl-next {
-  right: -45px;
-  top: 45%;
-}
  .wrap-slick3-arrows {
   position: absolute;
   z-index: 100;
@@ -1355,10 +1346,12 @@ a.a-blog:hover { color: #70B8B4; }
 .owl-theme .owl-nav .owl-prev {
   left: 0!important;
   padding-left: 20px!important;
+  top: 45%;
 }
 .owl-theme .owl-nav .owl-next {
   right: 0!important;
   padding-right: 20px!important;
+  top: 45%;
 }
 .owl-dots{
   position: absolute;
