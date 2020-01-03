@@ -142,13 +142,13 @@
 
 <section id="hubungi-kami" class="main-section">
   <div class="container">
-    <%= render :partial => "shared/flash" %>
     <div class="row">
       <div class="col-12">
         <h2 class="header">GET IN TOUCH</h2>
       </div>
       <div class="col-12 col-lg-7">
         <div class="ca-form">
+          <%= render :partial => "shared/flash" %>
           <div class="cf-msg" style="display: none;"></div>
           <%= simple_form_for @contact, url: save_contact_us_path(anchor: "hubungi-kami"), wrapper: :vertical_form,
                     wrapper_mappings: { check_boxes: :vertical_collection } do |f| %>
