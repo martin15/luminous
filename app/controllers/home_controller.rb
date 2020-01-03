@@ -14,9 +14,9 @@ class HomeController < ApplicationController
   def contact_us
     @contact = Contact.new(contact_params)
     if verify_recaptcha(model: @contact) && @contact.save
-      # ContactUsMailer.notification_user(@contact, the_domain).deliver_now
-      # ContactUsMailer.notification_dev(@contact, the_domain).deliver_now
-      # ContactUsMailer.notification_admin(@contact, the_domain).deliver_now
+      ContactUsMailer.notification_user(@contact, the_domain).deliver_now
+      ContactUsMailer.notification_officer(@contact, the_domain).deliver_now
+      ContactUsMailer.notification_admin(@contact, the_domain).deliver_now
       flash[:notice] = 'Message was successfully sent.'
       redirect_to root_path(anchor: "hubungi-kami")
     else
