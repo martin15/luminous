@@ -32,6 +32,7 @@ class HomeController < ApplicationController
         @products = Product.all
         flash[:error] = "Message was successfully sent - reCaptcha is required"
         render :action => :index, anchor: "hubungi-kami"
+      end
     else
       @banners = Banner.where("banner_type = 'banner'")
       @services = Banner.where("banner_type = 'services'")
