@@ -30,14 +30,14 @@ class HomeController < ApplicationController
         @banners = Banner.where("banner_type = 'banner'")
         @services = Banner.where("banner_type = 'services'")
         @products = Product.all
-        flash[:error] = "Message was successfully sent - reCaptcha is required"
+        flash[:error] = "Message failed to send"
         render :action => :index, anchor: "hubungi-kami"
       end
     else
       @banners = Banner.where("banner_type = 'banner'")
       @services = Banner.where("banner_type = 'services'")
       @products = Product.all
-      flash[:error] = "Message failed to send"
+      flash[:error] = "Message was successfully sent - reCaptcha is required"
       render :action => :index, anchor: "hubungi-kami"
     end
   end
