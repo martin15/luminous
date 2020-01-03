@@ -4,18 +4,18 @@ class ContactUsMailer < ApplicationMailer
   def notification_user(contact, domain)
     @contact = contact
     @domain = domain
-    mail(:to => contact.email, :subject => contact.subject)
+    mail(:to => contact.email, :subject => "Thank you for contacting LUMINOUS")
   end
 
   def notification_officer(contact, domain)
     @contact = contact
     @domain = domain
-    mail(:to => "luminousplatingsolution@gmail.com", :subject => "[Luminous Admin] #{contact.subject}")
+    mail(:to => "luminousplatingsolution@gmail.com", :subject => "[Luminous Admin] Question")
   end
 
   def notification_admin(contact, domain)
     @contact = contact
     @domain = domain
-    mail(:to => "martin.me15@yahoo.com", :subject => "[Luminous] #{contact.subject}")
+    mail(:to => "martin.me15@yahoo.com", :subject => "[Luminous Question]")
   end
 end
