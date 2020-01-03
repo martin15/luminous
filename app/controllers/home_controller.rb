@@ -19,14 +19,16 @@ class HomeController < ApplicationController
 
   def contact_us
     @contact = Contact.new(contact_params)
-    if verify_recaptcha(model: @contact) && @contact.save
+    captcha_status = verify_recaptcha(model: @contact)
+    if captcha_status && @contact.save
       ContactUsMailer.notification_user(@contact, the_domain).deliver_now
       ContactUsMailer.notification_officer(@contact, the_domain).deliver_now
       ContactUsMailer.notification_admin(@contact, the_domain).deliver_now
       flash[:notice] = 'Message was successfully sent.'
       redirect_to root_path(anchor: "hubungi-kami")
     else
-      captcha_error = verify_recaptcha(model: @contact) ? "" : " - reCaptcha is required" 
+      @contact.valid?
+      captcha_error = captcha_status ? "" : " - reCaptcha is required" 
       @banners = Banner.where("banner_type = 'banner'")
       @services = Banner.where("banner_type = 'services'")
       @products = Product.all
