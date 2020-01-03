@@ -20,8 +20,11 @@ class HomeController < ApplicationController
       flash[:notice] = 'Message was successfully sent.'
       redirect_to root_path(anchor: "hubungi-kami")
     else
+      @banners = Banner.where("banner_type = 'banner'")
+      @services = Banner.where("banner_type = 'services'")
+      @products = Product.all
       flash[:error] = "Message failed to send"
-      render :action => :index
+      render :action => :index, anchor: "hubungi-kami"
     end
   end
 
