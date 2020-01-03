@@ -6,9 +6,15 @@ class HomeController < ApplicationController
     @banners = Banner.where("banner_type = 'banner'")
     @services = Banner.where("banner_type = 'services'")
     @products = Product.all
+    @meta_description = "Apa itu Elektroplating? Mengapa Diperlukan Proses Elektroplating? 
+                         Jual bahan untuk Elektroplating. Tutorial Elektroplating. 
+                         Jual bahan untuk penyepuhan. Penyepuhan "
   end
 
   def faq
+    @meta_description = "Apa itu Elektroplating? Mengapa Diperlukan Proses Elektroplating? 
+                         Jual bahan untuk Elektroplating. Tutorial Elektroplating. 
+                         Jual bahan untuk penyepuhan. Penyepuhan "
   end
 
   def contact_us
