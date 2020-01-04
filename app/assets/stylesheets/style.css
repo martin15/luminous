@@ -69,7 +69,7 @@ footer .links li a.underline:hover .slider{
 }
 #nav .links li a.underline:hover, #nav .links li.active a.underline,
 footer .links li a.underline:hover{
-  color: #f9d05a;
+  color: #ffcf48;
 }
 
 #nav .links li a.underline,  footer .links li a.underline{
@@ -345,7 +345,7 @@ footer .links li a.underline:hover{
 }
 
 .footer-widget .title {
-  color: #E9BD1D;
+  color: #ffcf48;
   font-size: 24px;
   line-height: 28px;
   margin: 0 0 37px;
@@ -387,7 +387,7 @@ footer .links li a.underline:hover{
 }
 .footer-widget .text .small-header{
   font-size: 15px;
-  color: #E9BD1D;
+  color: #ffcf48;
   line-height: 35px;
 }
 .fw-contact .text {
@@ -534,7 +534,7 @@ section {
 #pre-banner{padding-top: 0px;}
 #services h1, #product h1{
   font: 400 35px 'Titillium Web', sans-serif;
-  color: #f9d05a;
+  color: #ffcf48;
   text-transform: uppercase;
   margin-bottom: 30px;
   letter-spacing: -1px;
@@ -557,7 +557,7 @@ section {
   text-align: center;
 }
 #services .services-detail .services-detail-content{
-  background-color: #FAC950;
+  background-color: #ffcf48;
   padding: 35px 50px 25px;
 }
 #services .services-detail p, #services .services-detail h2{color: #000;}
@@ -656,7 +656,7 @@ section#hubungi-kami{ padding-top: 10px!important; background-color: #2d2d30;}
   text-align: center;
   margin-right: 20px;
   margin-bottom: 10px;
-  background-color: #f9d05a;
+  background-color: #ffcf48;
 }
 
 #hubungi-kami .ca-info .info li .title {
@@ -710,16 +710,16 @@ section#hubungi-kami{ padding-top: 10px!important; background-color: #2d2d30;}
 }
 
 .btn-outline-yellow {
-  color: #f9d05a;
+  color: #ffcf48;
   background-color: transparent;
   background-image: none;
-  border-color: #f9d05a!important;
+  border-color: #ffcf48!important;
 }
 
 .btn-outline-yellow:hover {
   color: #fff;
-  background-color: #f9d05a;
-  border-color: #f9d05a;
+  background-color: #ffcf48;
+  border-color: #ffcf48;
 }
 .contact-wa{
   width: 85px;
@@ -1235,8 +1235,8 @@ section.logged-user .row{
   color: #316B7B;
   font-weight: 600;
 }
-.faq-nav ul li:hover a{ color: #f9d05a; }
-.faq-nav ul li a.active{ color: #f9d05a;text-decoration: underline; }
+.faq-nav ul li:hover a{ color: #ffcf48; }
+.faq-nav ul li a.active{ color: #ffcf48;text-decoration: underline; }
 
 .faq-content { padding: 0 0 10px 25px!important; }
 .faq-content .faq-item{ margin-bottom: 50px; }
@@ -1259,14 +1259,14 @@ img.p-image-4 { width: 400px; }
 
 .faq-content h1{
   font: 400 40px 'Titillium Web', sans-serif;
-  color: #f9d05a;
+  color: #ffcf48;
   text-transform: uppercase;
   margin-bottom: 30px;
 }
 
 .faq-content h2{
   font: 400 25px 'Titillium Web', sans-serif;
-  color: #f9d05a;
+  color: #ffcf48;
   text-transform: uppercase;
   margin-bottom: 25px;
 }
