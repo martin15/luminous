@@ -108,14 +108,14 @@ footer .links li a.underline:hover{
 #menu.enable-scroll { overflow-y: scroll; }
 
 #nav.scrolled {
-  background-color: #ffcc33;
+  background-color: #ffcf48;
   box-shadow: 0 2px 2px #ccc;
   opacity: 1; 
 }
 #nav.scrolled .bars span { background-color: #222222; }
 #nav.scrolled .links li a {
   color: #404040;
-  background-color: #ffcc33;
+  background-color: #ffcf48;
   border-color: #404040; 
 }#nav.scrolled .links li a:hover{
   color: #1e69a1;
@@ -191,7 +191,7 @@ footer .links li a.underline:hover{
 }
 
 .custom-toggler.navbar-toggler {
-  border-color: #ffcc33!important;
+  border-color: #ffcf48!important;
 }
 .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,204,51, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")!important;
