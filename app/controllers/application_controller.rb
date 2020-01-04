@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  BRAND_NAME = 'Luminous'.freeze
+  BRAND_NAME = 'Luminous - OBAT SEPUH PERHIASAN TERBAIK telah melayani ratusan toko emas dan terbukti hasilnya'.freeze
 
   def meta_title(title = "")
     [title, BRAND_NAME].reject(&:empty?).join(' | ')
