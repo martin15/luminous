@@ -11,5 +11,11 @@ user = User.find_or_create_by(email: "martin.me15@yahoo.com") do |user|
 end
 puts user.inspect
 
+user = User.find_or_create_by(email: "luminousplatingsolution@gmail.com") do |user|
+  user.name = "Admin"
+  user.password_digest = BCrypt::Password.create('LuminousAdmin123').to_s
+end
+puts user.inspect
+
 
 
