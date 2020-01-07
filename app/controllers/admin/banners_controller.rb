@@ -44,7 +44,7 @@ class Admin::BannersController < Admin::ApplicationController
   private
 
     def banner_params
-      params.require(:banner).permit(:image, :url, :order )
+      params.require(:banner).permit(:image, :url, :order, :alt )
     end
 
     def find_banner

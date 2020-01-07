@@ -38,7 +38,7 @@
     <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-black sticky-top">
       <div class="container">
         <%= link_to root_path, class: "navbar-brand logo" do %>
-          <%= image_tag "logo.png", class: "img-fluid" %>
+          <%= image_tag "luminous-plating-solution-logo.png", class: "img-fluid", alt: "luminous plating solution" %>
         <% end %> 
         <!-- menu bars -->
 
@@ -73,7 +73,7 @@
     <%= yield %>
 
     <div class="fixed-bottom text-right">
-      <%= link_to (image_tag "wa-icon.png", class: "img-fluid contact-wa"),
+      <%= link_to (image_tag "wa-icon.png", class: "img-fluid contact-wa", alt: "Luminous obat sepuh perhiasan terbaik"),
                   "https://api.whatsapp.com/send?phone=+6281223888825", target: "_blank" %>
     </div>
 
@@ -84,7 +84,8 @@
             <div class="col-md-3 col-6">
               <div class="fw-info footer-widget">
                 <div class="flogo">
-                  <%= image_tag "logo.png", class: "logo2 img-fluid", style: "width:200px" %>
+                  <%= image_tag "luminous-plating-solution-logo.png", class: "logo2 img-fluid",
+                                style: "width:200px", alt: "luminous plating solution" %>
                 </div>
                 <p class="text">
                   OBAT SEPUH PERHIASAN TERBAIK telah melayani ratusan toko emas 
@@ -106,9 +107,15 @@
             <div class="col-md-3 col-6">
               <div class="fw-links footer-widget connect">
                 <h2 class="title">CONNECT</h2>
-                <%= link_to (image_tag "icon-bukalapak.png", class: "img-fluid"), "https://www.bukalapak.com/u/luminous502", target: "_blank" %>
-                <%= link_to (image_tag "icon-tokopedia.png", class: "img-fluid"), "#" %>
-                <%= link_to (image_tag "icon-shopee.png", class: "img-fluid"), "https://shopee.co.id/thezeff", target: "_blank" %>
+                <%= link_to (image_tag "icon-bukalapak.png", class: "img-fluid", 
+                                       alt: "Luminous obat sepuh perhiasan terbaik online shop bukalapak"), 
+                            "https://www.bukalapak.com/u/luminous502", target: "_blank" %>
+                <%= link_to (image_tag "icon-tokopedia.png", class: "img-fluid", 
+                                       alt: "Luminous obat sepuh perhiasan terbaik online shop tokopedia"),
+                            "#" %>
+                <%= link_to (image_tag "icon-shopee.png", class: "img-fluid", 
+                                       alt: "Luminous obat sepuh perhiasan terbaik online shop shopee"),
+                            "https://shopee.co.id/thezeff", target: "_blank" %>
               </div>
             </div>
             <div class="col-md-4 col-6">

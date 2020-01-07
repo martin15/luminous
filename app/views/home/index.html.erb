@@ -23,8 +23,10 @@
 <section id="pre-banner" class="main-section bg-black-gradient no-padding-lr">
   <div class="row justify-content-center no-margin-lr">
     <div class="col-12 no-padding-lr">
-      <%= image_tag "sub-banner.jpg", class: "img-fluid web-display" %>
-      <%= image_tag "sub-banner-mobile.jpg", class: "img-fluid mobile-display" %>
+      <%= image_tag "sub-banner.jpg", class: "img-fluid web-display", 
+                    alt: "Luminious obat sepuh perhiasan terbaik" %>
+      <%= image_tag "sub-banner-mobile.jpg", class: "img-fluid mobile-display", 
+                    alt: "Luminious obat sepuh perhiasan terbaik" %>
     </div>
   </div>
 </section>
@@ -37,7 +39,7 @@
         <%# <div class="custom-overlay-inner">
           &nbsp;
         </div> %>
-        <%= image_tag banner.image.url(:large) %>
+        <%= image_tag banner.image.url(:large), alt: banner.alt %>
         <div class="img-gradation"></div>
       </div>
     <% end %>
@@ -49,7 +51,8 @@
   </div>
   <div class="row justify-content-center no-margin-lr">
     <div class="col-12 col-md-6 services-image">
-      <%= image_tag "640-Konsultasi.png", class: "img-fluid" %>
+      <%= image_tag "640-Konsultasi.png", class: "img-fluid", 
+                    alt: "Luminous obat sepuh perhiasan terbaik memberikan layanan konsultasi" %>
     </div>
     <div class="col-12 col-md-6 services-detail my-auto">
       <div class="services-detail-content">
@@ -62,7 +65,8 @@
       </div>
     </div>
     <div class="col-12 col-md-6 services-image order-md-2">
-      <%= image_tag "640-Pelatihan.png", class: "img-fluid" %>
+      <%= image_tag "640-Pelatihan.png", class: "img-fluid", 
+                    alt: "Luminous obat sepuh perhiasan terbaik memberikan layanan pelatihan" %>
     </div>
     <div class="col-12 col-md-6 services-detail my-auto order-md-1">
       <div class="services-detail-content">

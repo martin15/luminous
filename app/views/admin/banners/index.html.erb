@@ -25,6 +25,7 @@
               <th>#</th>
               <th>Image</th>
               <th>URL</th>
+              <th>alt</th>
               <th>&nbsp;</th>
             </tr>
           </thead>
@@ -34,6 +35,7 @@
                 <th scope="row"><%= @no+x+1 %></th>
                 <td><%= image_tag banner.image.url(:thumb) %></td>
                 <td><%= banner.url %></td>
+                <td><%= banner.alt %></td>
                 <td>
                   <%= link_to "Edit", edit_admin_banner_path(banner.id), :class => "btn btn-success" %>
                   <%= link_to "Delete", admin_banner_path(banner.id), :method => :delete,
